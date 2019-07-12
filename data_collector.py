@@ -5,7 +5,7 @@ app=Flask(__name__)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://zeta_g@localhost/height_collector'
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://zeta_g:postgres123@localhost/height_collector'
 
 db=SQLAlchemy(app)
 
