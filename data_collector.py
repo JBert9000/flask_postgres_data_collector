@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
+from send_email import send_email
 
 app=Flask(__name__)
 
@@ -28,7 +29,7 @@ def success():
     if request.method=='POST':
         email=request.form["email_name"]
         height=request.form["height_name"]
-        print(str(email),str(height))
+        send_email(email,height)
         return render_template("success.html")
 
 if __name__ == '__main__':
