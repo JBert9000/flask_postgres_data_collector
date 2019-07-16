@@ -1,6 +1,6 @@
 from email.mime.text import MIMEText
 import smtplib
-from imaplib import IMAP4
+# from imaplib import IMAP4
 
 
 def send_email(email,height):
@@ -19,7 +19,7 @@ def send_email(email,height):
 
     yandex=smtplib.SMTP('smtp.yandex.com',587)
     # yandex=imaplib.IMAP4("imap.yandex.com",993)
-    # yandex=smtplib.SMTP('smtp.gmail.com',)
+
     yandex.ehlo()
     yandex.starttls()
     yandex.ehlo()
