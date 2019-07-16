@@ -17,10 +17,11 @@ def send_email(email,height):
     msg['To']=to_email
     msg['From']=from_email
 
-    yandex=smtplib.SMTP('smtp.yandex.com',465)
+    yandex=smtplib.SMTP('smtp.yandex.com',587)
     # yandex=imaplib.IMAP4("imap.yandex.com",993)
     # yandex=smtplib.SMTP('smtp.gmail.com',)
     yandex.ehlo()
     yandex.starttls()
+    yandex.ehlo()
     yandex.login(from_email,from_password)
     yandex.send_message(msg)
